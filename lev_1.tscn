@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1n45nhotmcc6"]
+[gd_scene load_steps=8 format=3 uid="uid://d1n45nhotmcc6"]
 
 [ext_resource type="Texture2D" uid="uid://bmic6riuxjag6" path="res://tex/flore.png" id="1_3qvbs"]
 [ext_resource type="Script" path="res://lev_1.gd" id="1_uthv3"]
+[ext_resource type="PackedScene" uid="uid://cxtrpun0rqt0s" path="res://badguy.tscn" id="3_6boed"]
+[ext_resource type="PackedScene" uid="uid://dlwapfiufgn3k" path="res://example_node.tscn" id="4_1imuh"]
+[ext_resource type="Script" path="res://badguy-ref.gd" id="4_v4xsq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkcme"]
 texture = ExtResource("1_3qvbs")
@@ -4112,3 +4115,10 @@ script = ExtResource("1_uthv3")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_c8vpw")
+
+[node name="badguy" parent="." instance=ExtResource("3_6boed")]
+position = Vector2(1019, 481)
+script = ExtResource("4_v4xsq")
+
+[node name="guy" parent="." instance=ExtResource("4_1imuh")]
+position = Vector2(253, 357)
