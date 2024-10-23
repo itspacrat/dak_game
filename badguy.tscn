@@ -8,18 +8,18 @@ size = Vector2(18, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7mj5"]
 
-[node name="badguy" type="Node2D"]
-
-[node name="badguy" type="CharacterBody2D" parent="."]
+[node name="badguy" type="CharacterBody2D"]
 script = ExtResource("1_yiv03")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="badguy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4j41j")
 
-[node name="Sprite2D" type="Sprite2D" parent="badguy"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_513ul")
 
-[node name="Area2D" type="Area2D" parent="badguy"]
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="badguy/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_o7mj5")
+
+[node name="badguy" type="Node2D" parent="."]
