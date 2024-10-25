@@ -8,3 +8,6 @@
 
 # per godot-rust book
 !.godot/.gdignore
+
+# blake
+*.tmp
