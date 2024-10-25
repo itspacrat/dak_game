@@ -4,11 +4,11 @@ compatibility_minimum = 4.1
 reloadable = true
 
 [libraries]
-linux.debug.x86_64 =     "res://../rust/target/debug/libdak_game.so"
-linux.release.x86_64 =   "res://../rust/target/release/libdak_game.so"
-windows.debug.x86_64 =   "res://../rust/target/debug/dak_game.dll"
-windows.release.x86_64 = "res://../rust/target/release/dak_game.dll"
-macos.debug =            "res://../rust/target/debug/libdak_game.dylib"
-macos.release =          "res://../rust/target/release/libdak_game.dylib"
-macos.debug.arm64 =      "res://../rust/target/debug/libdak_game.dylib"
-macos.release.arm64 =    "res://../rust/target/release/libdak_game.dylib"
+linux.debug.x86_64 =     "res://target/debug/libdak_game.so"
+linux.release.x86_64 =   "res://target/release/libdak_game.so"
+windows.debug.x86_64 =   "res://target/debug/dak_game.dll"
+windows.release.x86_64 = "res://target/release/dak_game.dll"
+macos.debug =            "res://target/debug/libdak_game.dylib"
+macos.release =          "res://target/release/libdak_game.dylib"
+macos.debug.arm64 =      "res://target/debug/libdak_game.dylib"
+macos.release.arm64 =    "res://target/release/libdak_game.dylib"
