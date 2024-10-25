@@ -4,12 +4,16 @@ var client_id
 var movespeed = 300
 var proj_speed = 2000
 
-var player_sc = preload("res://example_node.tscn")
-var blt_sc = preload("res://starter_bullet.tscn")
+var bullet_factory = preload("res://starter_bullet.gd")
+
+# ON LOAD
 func _ready():
 	pass
+	# character and enemy preloads
+	#player = preload("res://example_node.tscn").instantiate()
+	#blt = preload("res://starter_bullet.tscn")
 
-# main uopdate loop 
+# EVERY FRAME
 func _physics_process(delta):
 	# Mouse thing, always point at mouse
 	look_at(get_global_mouse_position())
@@ -35,8 +39,8 @@ func _physics_process(delta):
 		fire()
 
 func fire():
-	var blt_inst = blt_sc.instantiate()
-	var blt_pos = blt_inst.get_global_position()
-	blt_inst.rotation = rotation
-	blt_inst.apply_central_impulse(Vector2(),Vector2(proj_speed,0)).rotated(rotation)
-	get_tree().get_root().call_deferred("add_child",blt_inst)
+	var bullet = bullet_factory.instantiate()
+	var blt_pos = bullet.get_global_position()
+	bullet.rotation = rotation
+	bullet.apply_central_impulse(Vector2(),Vector2(proj_speed,0)).rotated(rotation)
+	get_tree().get_root().call_deferred("add_child",bullet)
