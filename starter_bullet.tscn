@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0paa6fkkmin3"]
+
+[ext_resource type="Texture2D" uid="uid://katgxgu8hle3" path="res://tex/blt.png" id="1_depra"]
+[ext_resource type="Script" path="res://starter_bullet.gd" id="1_eh5oy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbq34"]
+size = Vector2(8, 5)
+
+[node name="bullet" type="RigidBody2D"]
+script = ExtResource("1_eh5oy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sbq34")
+
+[node name="Blt" type="Sprite2D" parent="."]
+texture = ExtResource("1_depra")
