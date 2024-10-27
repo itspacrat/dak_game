@@ -11,6 +11,7 @@ func _ready() -> void:
 	enemy = peon_factory.instantiate()
 	get_tree().get_root().call_deferred("add_child",player)
 	get_tree().get_root().call_deferred("add_child",enemy)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
