@@ -2,12 +2,14 @@
 .godot/
 /android/
 
-
 # Added by cargo
 /target
 
 # per godot-rust book
 !.godot/.gdignore
 
-# blake
+# ignore godot temp files
 *.tmp
+
+# ignore krita temp files
+*.*~
