@@ -4,6 +4,7 @@ var tgt: CharacterBody2D
 var health: int
 var speed: int = 40
 
+
 # On Load
 func _ready() -> void:
 	tgt = get_parent().get_node("guy")
@@ -11,10 +12,12 @@ func _ready() -> void:
 
 # Per Frame
 func _process(delta: float) -> void:
-	look_at(tgt.position)
-	if tgt.position
-	# position += (tgt.position - position)/70
+	for axis: int in [0,1]:
+		# track player axes and modify movement based on those 
+		motion[axis] += (tgt.get_position()[axis] - get_position()[axis])
+	
 	motion = motion.normalized()
 	velocity = speed * motion
-	# motion = move_and_slide()
+	
+	look_at(tgt.get_position()) # staring is rude :(
 	move_and_collide(motion)
