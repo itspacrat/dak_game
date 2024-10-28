@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="squart"
-run/main_scene="res://example_node.tscn"
+run/main_scene="res://lev_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1365
-window/size/viewport_height=1024
+window/size/viewport_width=1366
+window/size/viewport_height=768
 
 [input]
 

@@ -2,13 +2,13 @@ extends CharacterBody2D
 
 var client_id
 var movespeed = 300
-var proj_speed = 2000
+var proj_speed = 1000
 
-var bullet_factory = preload("res://starter_bullet.gd")
+var bullet_factory: PackedScene 
 
 # ON LOAD
 func _ready():
-	pass
+	bullet_factory = preload("res://starter_bullet.tscn")
 	# character and enemy preloads
 	#player = preload("res://example_node.tscn").instantiate()
 	#blt = preload("res://starter_bullet.tscn")
@@ -39,8 +39,11 @@ func _physics_process(delta):
 		fire()
 
 func fire():
-	var bullet = bullet_factory.instantiate()
-	var blt_pos = bullet.get_global_position()
+	var bullet: RigidBody2D = bullet_factory.instantiate()
+	bullet.gravity_scale = 0
+	# use the player position and rotation
+	bullet.position = position
 	bullet.rotation = rotation
-	bullet.apply_central_impulse(Vector2(),Vector2(proj_speed,0)).rotated(rotation)
+	var blt_pos = bullet.get_global_position()
+	bullet.apply_central_impulse(Vector2(proj_speed,rotation))
 	get_tree().get_root().call_deferred("add_child",bullet)

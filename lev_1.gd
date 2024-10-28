@@ -8,6 +8,7 @@ var enemy: CharacterBody2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = player_factory.instantiate()
+	player.position = Vector2(500,200)
 	enemy = peon_factory.instantiate()
 	get_tree().get_root().call_deferred("add_child",player)
 	get_tree().get_root().call_deferred("add_child",enemy)
