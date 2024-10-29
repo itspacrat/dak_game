@@ -40,10 +40,7 @@ func _physics_process(delta):
 
 func fire():
 	var bullet: RigidBody2D = bullet_factory.instantiate()
-	bullet.gravity_scale = 0
 	# use the player position and rotation
-	bullet.position = position
+	bullet.position = get_position() + Vector2(20,20)
 	bullet.rotation = rotation
-	var blt_pos = bullet.get_global_position()
-	bullet.apply_central_impulse(Vector2(proj_speed,rotation))
 	get_tree().get_root().call_deferred("add_child",bullet)
