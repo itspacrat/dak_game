@@ -2,7 +2,7 @@ extends CharacterBody2D
 var motion = Vector2()
 var tgt: CharacterBody2D
 var health: int
-var speed: int = 40
+var speed: int = 10
 
 
 # On Load
@@ -18,6 +18,5 @@ func _process(delta: float) -> void:
 	
 	motion = motion.normalized()
 	velocity = speed * motion
-	
 	look_at(tgt.get_position()) # staring is rude :(
 	move_and_collide(motion)
