@@ -1,5 +1,5 @@
 use godot::prelude::*;
-
+mod player;
 struct GameExt;
 
 #[gdextension]

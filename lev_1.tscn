@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://d1n45nhotmcc6"]
+[gd_scene load_steps=7 format=4 uid="uid://d1n45nhotmcc6"]
 
 [ext_resource type="Texture2D" uid="uid://bmic6riuxjag6" path="res://tex/flore.png" id="1_3qvbs"]
 [ext_resource type="Script" path="res://lev_1.gd" id="1_uthv3"]
+[ext_resource type="PackedScene" uid="uid://dabf6kgpsqu4" path="res://enemy_tower.tscn" id="3_781re"]
+[ext_resource type="PackedScene" uid="uid://c2knki6m4t2q4" path="res://cuatom_test.tscn" id="4_pbrwd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkcme"]
 texture = ExtResource("1_3qvbs")
@@ -4108,8 +4110,24 @@ tile_size = Vector2i(341, 341)
 sources/0 = SubResource("TileSetAtlasSource_dkcme")
 
 [node name="lev1" type="Node2D"]
+position = Vector2(-40, -296)
 script = ExtResource("1_uthv3")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAIAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAACAAAAAAADAAEAAAACAAEAAAADAAIAAAACAAEAAAADAAMAAAACAAIAAAACAAMAAAABAAIAAAABAAMAAAABAAIAAAABAAIAAAABAAEAAAACAAIAAAABAAEAAAACAAEAAAABAAEAAAABAAEAAAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAAAAAEAAAABAAEAAAAAAAIAAAABAAEAAAAAAAMAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAADAAEAAAABAAEAAAADAAIAAAABAAEAAAADAAMAAAABAAEAAAACAAMAAAABAAEAAAABAAMAAAABAAEAAAABAAIAAAABAAEAAAACAAIAAAABAAEAAAACAAEAAAABAAEAAAABAAAAAAABAAEAAAABAAEAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_c8vpw")
+
+[node name="EnemyTower" parent="." instance=ExtResource("3_781re")]
+position = Vector2(241, 460)
+
+[node name="Player" parent="." instance=ExtResource("4_pbrwd")]
+position = Vector2(265, 352)
+
+[node name="Player2" parent="." instance=ExtResource("4_pbrwd")]
+position = Vector2(346, 439)
+
+[node name="Player3" parent="." instance=ExtResource("4_pbrwd")]
+position = Vector2(419, 352)
+
+[node name="Player4" parent="." instance=ExtResource("4_pbrwd")]
+position = Vector2(459, 508)

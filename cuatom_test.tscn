@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2knki6m4t2q4"]
+
+[ext_resource type="Texture2D" uid="uid://bwox40sniyfyg" path="res://tex/bat.png" id="1_7tiv8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvlkb"]
+size = Vector2(28, 5)
+
+[node name="Player" type="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_xvlkb")
+
+[node name="Bat" type="Sprite2D" parent="."]
+position = Vector2(3.57628e-07, 0)
+scale = Vector2(1.86667, 2.4)
+texture = ExtResource("1_7tiv8")
