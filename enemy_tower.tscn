@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dabf6kgpsqu4"]
+
+[ext_resource type="Texture2D" uid="uid://co60ol0rfajhd" path="res://tex/EnemyTower.png" id="1_gf2r7"]
+[ext_resource type="Script" path="res://enemy_tower.gd" id="1_q5gni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dwd0"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dkm7"]
+size = Vector2(30, 30)
+
+[node name="EnemyTower" type="StaticBody2D"]
+script = ExtResource("1_q5gni")
+
+[node name="CollideBox" type="Area2D" parent="."]
+
+[node name="Collider" type="CollisionShape2D" parent="CollideBox"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_1dwd0")
+
+[node name="EnemyTower" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_gf2r7")
+
+[node name="InnerBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_6dkm7")
