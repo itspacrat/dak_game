@@ -5,5 +5,5 @@ nav
 - [creds](#Credits)
 
 # Credits
-Dak "Spookee" W.
-Blake "PacRat" G.
+- Dak "Spookee" W.
+- Blake "PacRat" G.
