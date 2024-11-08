@@ -6,6 +6,6 @@ nav
 
 # Credits
 - Dak "Spookee" W.
-> world design / mechanics design / general whimsy
+  > world design / mechanics design / general whimsy
 - Blake "PacRat" G.
-> world design / artwork / programming
+  > world design / artwork / programming
